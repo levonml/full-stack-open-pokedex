@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+const cy = require('cypress')
 
 describe('Pokemon page', function() {
   it('entering pokemon page', function() {
