@@ -10,7 +10,7 @@
 	"test:e2e": "cypress open",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-	"setWSLPort": "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0"
+	"setWSLPort": "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0\n"
   },
   "repository": {
     "type": "git",
