@@ -9,8 +9,8 @@ jobs:
     
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+      - name: Cypress.io
+        uses: cypress-io/github-action@v2.9.7
         with:
           command: npm run test:e2e
           start: npm run start-prod
