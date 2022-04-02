@@ -16,3 +16,6 @@ jobs:
           heroku_app_name: "pumpkin-tart-58430" #Must be unique in Heroku
           heroku_email: "levonmll@gmail.com"
           healthcheck: "https://pumpkin-tart-58430.herokuapp.com/health"
+          checkstring: "ok"
+          dely: 5
+          rollbackonhealthcheckfailed: true
