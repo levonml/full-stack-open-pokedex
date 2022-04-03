@@ -21,9 +21,8 @@ jobs:
       - name: bulid
         run: npm run build
       - name: e2e tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v2.9.7
         with:
-          command: npm run test:e2e
-          start: npm run start-prod
-          wait-on: http://localhost:5000
+            start: npm run start-prod
+            build: npm run build
      
