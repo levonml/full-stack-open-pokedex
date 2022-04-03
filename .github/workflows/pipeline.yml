@@ -24,5 +24,4 @@ jobs:
         uses: cypress-io/github-action@v2.9.7
         with:
             start: npm run start-prod
-            build: npm run build
      
