@@ -1,4 +1,4 @@
-name: Testing stuffs
+name: Testing stuff
 on:
   push:
     branches:
