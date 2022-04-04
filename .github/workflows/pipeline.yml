@@ -31,7 +31,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "pumpkin-tart-58430" #Must be unique in Heroku
+          heroku_app_name: "pumpkin-tart-58430"
           heroku_email: "levonmll@gmail.com"
           healthcheck: "https://pumpkin-tart-58430.herokuapp.com/health"
           checkstring: "ok"
