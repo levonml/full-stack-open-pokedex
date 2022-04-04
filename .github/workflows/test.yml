@@ -1,10 +1,8 @@
 name: Testing stuff
-
 on:
   push:
     branches:
-      - main
-
+      - master
 jobs:
   a_test_job:
     runs-on: ubuntu-20.04
