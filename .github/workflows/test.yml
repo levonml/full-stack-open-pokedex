@@ -11,7 +11,7 @@ jobs:
       - name: gihub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-          COMMITS: ${{ toJson(github..event.commits) }}
+          COMMITS: ${{ toJson(github.event.commits) }}
         run: echo "$GITHUB_CONTEXT"
       - name: commit messages
         env:
