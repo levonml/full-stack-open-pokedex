@@ -50,8 +50,8 @@ jobs:
         if: failure()
         with:
           severity: error
-          details: commit
-          description: ${{ toJson(github.event.commits[0].url) }} by ${{ toJson(github.event.commits[0].author.username) }}
+          description: commit
+          details: ${{ github.event.commits[0].url }} by ${{ github.event.commits[0].author.username }}
           text: Build failed
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
