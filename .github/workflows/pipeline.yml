@@ -39,6 +39,7 @@ jobs:
           rollbackonhealthcheckfailed: true
       - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
+      - name: The job has succeeded
         if: success()
         with:
           severity: info
@@ -46,6 +47,7 @@ jobs:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test Failure
         uses: rjstone/discord-webhook-notify@v1
+      - name: build fail :(
         if: failure()
         with:
           severity: error
