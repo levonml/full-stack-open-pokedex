@@ -47,8 +47,7 @@ jobs:
         with:
           severity: info
           details: Test Succeeded!
-          description: commit
-          $COMMITS.url by $COMMITS.author.username
+          description: commit \n$COMMITS.url by $COMMITS.author.username
           text: Barvo! Your app was deployed successfully
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test Failure
