@@ -39,7 +39,7 @@ jobs:
           rollbackonhealthcheckfailed: true
       - name: heroku context
         env:
-          HEROKU_CONTEXT: ${{ toJson(heroku) }}
+          HEROKU_CONTEXT: ${{ toJson(github) }}
         run: echo "$HEROKU_CONTEXT"
       - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
