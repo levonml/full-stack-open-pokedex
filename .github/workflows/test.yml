@@ -19,5 +19,5 @@ jobs:
 
         run: |
           echo "$COMMITS"
-          echo ${{ toJson(github.event.commits) }}
-          ${{ toJson(github.event.commits.author.username) }}
+          echo ${{ toJson(github.event.commits.*.url) }}
+          ${{ toJson(github.event.commits.*.author.username) }}
