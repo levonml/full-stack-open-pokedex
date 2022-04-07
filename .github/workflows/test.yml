@@ -18,6 +18,6 @@ jobs:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
 
         run: |
-          echo "$COMMITS"
+
           echo ${{ toJson(github.event.commits.*.url) }}
-          ${{ toJson(github.event.commits.*.author.username) }}
+          echo ${{ toJson(github.event.commits.*.author.username) }}
