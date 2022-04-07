@@ -56,8 +56,7 @@ jobs:
         with:
           severity: error
           details: Test Failed!
-          description: commit
-          $COMMITS.url by $COMMITS.author.username
+          description: commit \n$COMMITS.url by $COMMITS.author.username
           text: Build failed
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
