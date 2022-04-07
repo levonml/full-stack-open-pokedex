@@ -37,17 +37,17 @@ jobs:
           checkstring: 'ok'
           delay: 5
           rollbackonhealthcheckfailed: true
-      - name: heroku context
+      - name: github context
         env:
-          HEROKU_CONTEXT: ${{ toJson(github) }}
-        run: echo "$HEROKU_CONTEXT"
+          COMMITS_URL: ${{ toJson(github.event.commits.url) }}
+          COMMITS_AUTHOR: ${{ toJson(github.event.commits.author.username) }}
       - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
         if: success()
         with:
           severity: info
-          details: Test Succeeded!
-          description: commit \n$COMMITS.url by $COMMITS.author.username
+          details: commit
+          description: $COMMITS_URL by $COMMITS_AUTHOR
           text: Barvo! Your app was deployed successfully
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test Failure
