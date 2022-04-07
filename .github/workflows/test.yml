@@ -11,13 +11,8 @@ jobs:
       - name: gihub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-          COMMITS: ${{ toJson(github.event.commits) }}
         run: echo "$GITHUB_CONTEXT"
       - name: commit messages
-        env:
-          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-
         run: |
-
-          echo ${{ toJson(github.event.commits.*.url) }}
-          echo ${{ toJson(github.event.commits.*.author.username) }}
+          echo "${{ toJson(github.event.commits.*.url) }}"
+          echo "${{ toJson(github.event.commits.*.author.username) }}"
