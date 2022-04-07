@@ -51,7 +51,7 @@ jobs:
         with:
           severity: error
           details: commit
-          description: ${{ toJson(github.event.commits) }} by ${{ toJson(github.event.commits.author.username) }}
+          description: ${{ toJson(github.event.commits.*.url) }} by ${{ toJson(github.event.commits.*.author.username) }}
           text: Build failed
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   tag_release:
