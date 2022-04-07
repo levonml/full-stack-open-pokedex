@@ -14,5 +14,5 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - name: commit messages
         run: |
-          echo "${{ toJson(github.event.commits[0].url) }}"
+          echo ${{ github.event.commits[0].url }}
           echo ${{ toJson(github.event.commits[0].author.username) }}

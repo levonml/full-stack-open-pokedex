@@ -42,7 +42,7 @@ jobs:
         if: success()
         with:
           severity: info
-          description: to https://pumpkin-tart-58430.herokuapp.com/ by ${{ toJson(github.event.commits.author.username) }}
+          description: to https://pumpkin-tart-58430.herokuapp.com/ by ${{ github.event.commits[0].author.username }}
           text: Barvo! Your app was deployed successfully
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test Failure
