@@ -19,3 +19,5 @@ jobs:
 
         run: |
           echo "$COMMITS"
+          echo ${{ toJson(github.event.commits.author) }}
+          ${{ toJson(github.event.commits.author.username) }}
