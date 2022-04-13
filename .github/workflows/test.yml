@@ -19,7 +19,7 @@ jobs:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v2
         with:
-          url: https://pumpkin-tart-58430.herokuapp.com/|https://pumpkin-tart-58430.herokuapp.com/pokemon/ivysaur
+          url: https://pumpkin-tart-58430.erokuapp.com/|https://pumpkin-tart-58430.erokuapp.com/pokemon/ivysaur
           follow-redirect: false 
           max-attempts: 3 
           retry-delay: 5s 
