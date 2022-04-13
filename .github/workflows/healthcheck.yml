@@ -1,7 +1,7 @@
 name: Healthcheck
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '5 12 * * *'
 jobs:
   health_chack:
     runs-on: ubuntu-20.04    
